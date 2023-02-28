@@ -5,16 +5,8 @@
 
 
 
-### Links
+### [URL LINK](https://pongbilska.netlify.app/)
 
-
-- [URL LINK](https://pongbilska.netlify.app/)
-- [CSS hsl colour tutorial and why to use it](https://www.youtube.com/watch?v=EJtmfkKulNA)
-- [UNIT VECTOR](https://www.youtube.com/watch?v=EJtmfkKulNA)
-- [Math.abs()](https://www.youtube.com/watch?v=xR82Jx4pqIc)
-
-
-## My process
 
 ### Built with
 
@@ -24,6 +16,11 @@
 
 
 ### What I learned
+
+- [CSS hsl colour tutorial and why to use it](https://www.youtube.com/watch?v=EJtmfkKulNA)
+- [UNIT VECTOR](https://www.youtube.com/watch?v=EJtmfkKulNA)
+- [Math.abs()](https://www.youtube.com/watch?v=xR82Jx4pqIc)
+
 
 - hsl colour:
 ```css

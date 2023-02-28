@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 10;
+    --saturation: 50%;
+    --foreground-color:hsl(var(--hue), var(--saturation), 75%);
+    --background-color:hsl(var(--hue), var(--saturation), 20%);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Tilt Warp', cursive, sans-serif;
+}
+
+/* uzywamy jednostki vh po to, aby gra zawsze byla fair, no matter screen size, paletka zawsze ma wartosc 10% ekranu */
+
+.paddle {
+    /* uzywamy variable po to, aby korzystac z niej w js */
+    --position: 50; 
+    position: absolute;
+    background-color: var(--foreground-color);
+    /* korzystamy z variable i mnozymy ja przez 1vh, aby uzyskac jednostke vh */
+    top: calc(var(--position) * 1vh);
+    /* uzywamy transform dlatego, ze teraz poczatek paletki jest dokladnie w 50vh ekranu, a chcemy, aby znajdowal sie tam jej srodek */
+    transform: translateY(-50%);
+    width: 1vh;
+    height: 10vh;  
+    border-radius: 0.5vh;      
+}
+
+.paddle.left {
+    /* 1 procent ekranu od lewej strony */
+    left: 1vw;
+}
+
+.paddle.right {
+    /* 1 procent ekranu od prawej strony */
+    right: 1vw;
+}
+
+.ball{
+    --x: 50; 
+    --y: 50;
+    position: absolute;
+    background-color: var(--foreground-color);
+    left: calc(var(--x) * 1vw);
+    top: calc(var(--y) * 1vh);
+    /* perfectly center */
+    transform: translate(-50%, -50%);
+    width: 2.5vh;
+    height: 2.5vh;  
+    border-radius: 50%;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 7vh;
+    color: var(--foreground-color);
+}
+
+/* select everything inside of score */
+.score > * {
+    /* dokladnie polowe ekranu zajmuje jeden score i dokladnie druga polowe zajmuje drugi score */
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 2vh;
+    margin: 1vh 0;
+    opacity: .5;
+}
+
+.score > :first-child {
+    text-align: right;
+    border-right: 0.3vh solid var(--foreground-color);
+}

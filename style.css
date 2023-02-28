@@ -16,7 +16,22 @@
 body {
     background-color: var(--background-color);
     font-family: 'Tilt Warp', cursive, sans-serif;
+    overflow: hidden;
 }
+
+h1 {
+    color: var(--foreground-color);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    margin-top: -100px;
+    }
+
+    .hide {
+        display: none;
+    }
 
 /* uzywamy jednostki vh po to, aby gra zawsze byla fair, no matter screen size, paletka zawsze ma wartosc 10% ekranu */
 

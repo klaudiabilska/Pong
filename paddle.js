@@ -29,3 +29,4 @@ export default class Paddle{
     }
 }
 
+console.log("Hello, world!")
